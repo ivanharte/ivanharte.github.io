@@ -9,114 +9,143 @@
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
         crossorigin="anonymous">
-
+    
+    <link rel="stylesheet" href="css/main.css"
+    >
     <title>Iván Harte | Cocinero vegano radicado en Barcelona</title>
 </head>
 
 <body>
 
-    <header class="container">
+    <header>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
+            <div class="container-fluid px-5 justify-content-start justify-content-lg-between">
 
-            <a class="navbar-brand" 
-                href="#">
+                <a class="navbar-brand font-weight-bold mr-lg-5" 
+                    href="./index.html">
 
-                Navbar
+                    Iván Harte
 
-            </a>
+                </a>
 
-            <button class="navbar-toggler" 
-                type="button" 
-                data-toggle="collapse" 
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" 
-                aria-expanded="false" 
-                aria-label="Toggle navigation">
-                
-                <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler ml-5" 
+                    type="button" 
+                    data-toggle="collapse" 
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                    
+                    <span class="navbar-toggler-icon"></span>
 
-            </button>
-        
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                </button>
+            
+                <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                    
+                    <ul class="navbar-nav flex-grow-1 justify-content-center">
 
-                <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active mr-lg-2 mr-xl-4">
+                            <a class="nav-link" href="./index.html">
+                                Home <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
 
+                        <li class="nav-item mr-lg-2 mr-xl-4">
+                            <a class="nav-link" href="./sobre-mi.html">
+                                Sobre mí
+                            </a>
+                        </li>
 
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">
-                            Home <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
+                        <li class="nav-item mr-lg-2 mr-xl-4">
+                            <a class="nav-link" href="./mis-servicios.html">
+                                Servicios
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            Link
-                        </a>
-                    </li>
+                        <li class="nav-item dropdown mr-lg-2 mr-xl-4">
 
-                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" 
+                                href="#" 
+                                id="navbarDropdown" 
+                                role="button" 
+                                data-toggle="dropdown"
+                                aria-haspopup="true" 
+                                aria-expanded="false">
 
-                        <a class="nav-link dropdown-toggle" 
-                            href="#" 
-                            id="navbarDropdown" 
-                            role="button" 
-                            data-toggle="dropdown"
-                            aria-haspopup="true" 
-                            aria-expanded="false">
+                                Artículos
 
-                            Dropdown
-
-                        </a>
-
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-                            <a class="dropdown-item" href="#">
-                                Action
                             </a>
 
-                            <a class="dropdown-item" href="#">
-                                Another action
-                            </a>
+                            <div class="dropdown-menu bg-dark border-0" aria-labelledby="navbarDropdown">
 
-                            <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="./recetas.html">
+                                    Recetas
+                                </a>
 
-                            <a class="dropdown-item" href="#">
-                                Something else here
+                                <a class="dropdown-item" href="./nutricion.html">
+                                    Nutrición
+                                </a>
+
+                                <a class="dropdown-item" href="./veganismo.html">
+                                    Veganismo
+                                </a>
+
+                                <a class="dropdown-item" href="./veganismo-en-barcelona.html">
+                                    Barcelona
+                                </a>
+
+                            </div>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" >
+                                Contacto
                             </a>
+                        </li>
+
+                    </ul>
+
+                    <form class="form-inline my-2 my-lg-0 ml-lg-5">
+
+                        <div class="input-group my-2 my-sm-0">
+
+                            <input type="search" 
+                                class="form-control" 
+                                placeholder="Buscar" 
+                                aria-label="Buscar">
+
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" 
+                                    type="submit">
+
+                                    <svg class="bi bi-search" 
+                                        width="1em" 
+                                        height="1em" 
+                                        viewBox="0 0 20 20" 
+                                        fill="currentColor" 
+                                        xmlns="http://www.w3.org/2000/svg">
+
+                                        <path fill-rule="evenodd" 
+                                            d="M12.442 12.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" 
+                                            clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd" 
+                                            d="M8.5 14a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM15 8.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" 
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                
+                                </button>
+                            </div>
 
                         </div>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link disabled" 
-                            href="#" 
-                            tabindex="-1" 
-                            aria-disabled="true">
 
-                                Disabled
-                        </a>
-                    </li>
+                        
+                        
 
-                </ul>
+                    </form>
 
-                <form class="form-inline my-2 my-lg-0">
-
-                    <input class="form-control mr-sm-2" 
-                        type="search" 
-                        placeholder="Search" 
-                        aria-label="Search">
-
-                    <button 
-                        class="btn btn-outline-success my-2 my-sm-0" 
-                        type="submit">
-
-                        Search
-
-                    </button>
-
-                </form>
+                </div>
 
             </div>
 
