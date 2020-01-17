@@ -1,6 +1,6 @@
 const entries = [
+    /*----------- MODELO ---------------------------
     {
-        /*----------- MODELO ---------------------------
         date: "2020-01-16",
         title: "Torta de zanahoria sin gluten con cobertura de crema de coco",
             //ver si coincide con metadato HTML, y si puede ser igual que primer párrafo
