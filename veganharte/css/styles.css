@@ -19,5 +19,16 @@ nav .dropdown-menu a:active {
 }
 .carousel-caption {
     background-color: rgba(255, 255, 255, .8);
+    font-weight: 500;
     width: 50vw;
+}
+.carousel-caption:hover,
+.carousel-caption:focus {
+    background-color: rgba(230, 230, 230, .85);
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 35%;
 }
