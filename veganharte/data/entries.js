@@ -1,6 +1,9 @@
+const featured = [0, 1, 2];    //array of ids of featured entries
+
 const entries = [
     /*----------- MODELO ---------------------------
     {
+        id: 0   //autogenerado, igual a posición en array
         date: "2020-01-16",
         title: "Torta de zanahoria sin gluten con cobertura de crema de coco",
             //ver si coincide con metadato HTML, y si puede ser igual que primer párrafo
@@ -23,6 +26,7 @@ const entries = [
         ingredients: ["zanahoria", "harina sin gluten", "leche vegetal", "aceite de coco", "azúcar"]
     }, ----------------------------------------------*/
     {
+        id: 0,
         date: "2020-01-05",
         title: "Fajitas de vegetales",
         description: "Una combinación de vegetales y salsas veganas únicas para rellenar fajitas de estilo mexicano",
@@ -39,6 +43,7 @@ const entries = [
         ingredients: []
     },
     {
+        id: 1,
         date: "2020-01-12",
         title: "Tapas veganas",
         description: "Una selección de platillos veganos para acompañar las cervezas de la tardecita",
@@ -55,6 +60,7 @@ const entries = [
         ingredients: []
     },
     {
+        id: 2,
         date: "2020-01-16",
         title: "Ensalada de kale",
         description: "Una deliciosa y nutritiva ensalada de kale para acompañar cualquier plato principal",
