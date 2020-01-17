@@ -1,3 +1,5 @@
+/* NavBar
+------------------------------------------*/
 nav .dropdown-item {
     color: rgba(255, 255, 255, .5);
 }
@@ -7,4 +9,15 @@ nav .dropdown-menu a:hover {
 }
 nav .dropdown-menu a:active {
     color: rgba(255, 255, 255);
+}
+
+/* Carousel
+------------------------------------------*/
+.carousel img {
+    height: 50vh;
+    object-fit: cover;
+}
+.carousel-caption {
+    background-color: rgba(255, 255, 255, .8);
+    width: 50vw;
 }

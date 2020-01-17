@@ -1,4 +1,7 @@
-const featured = [0, 1, 2];    //array of ids of featured entries
+const featured = {
+    featured: [0, 1, 2],        //array of ids of featured entries
+    activeID: 1
+};
 
 const entries = [
     /*----------- MODELO ---------------------------
@@ -16,6 +19,7 @@ const entries = [
         thumbnail: {
             large: "2020-01-2016-torta-de-zanahoria-thumbnail-large.jpg", //autogenerado
             small: "2020-01-2016-torta-de-zanahoria-thumbnail-small.jpg", //autogenerado
+            altText: "Porción de torta de zanahoria presentada con una taza de té"
         },
         images: [   //autogenerado
             {
@@ -38,6 +42,7 @@ const entries = [
         thumbnail: {
             large: "2020-01-05-fajitas-de-vegetales-large.jpg",
             small: "2020-01-05-fajitas-de-vegetales-small.jpg",
+            altText: "Fajitas de vegetales servidas en una bandeja"
         },
         images: [],
         ingredients: []
@@ -55,6 +60,7 @@ const entries = [
         thumbnail: {
             large: "2020-01-12-tapas-veganas-large.jpg",
             small: "2020-01-12-tapas-veganas-small.jpg",
+            altText: "Tapas veganas presentadas sobre una bandeja"
         },
         images: [],
         ingredients: []
@@ -72,6 +78,7 @@ const entries = [
         thumbnail: {
             large: "2020-01-16-ensalada-de-kale-large.jpg",
             small: "2020-01-16-ensalada-de-kale-small.jpg",
+            altText: "Bowl de ensalada kale"
         },
         images: [],
         ingredients: []
