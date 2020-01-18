@@ -27,7 +27,14 @@ const entries = [
                 alt: "Algunos ingredientes de la torta de zanahoria: zanahorias, harina sin gluten, leche vegetal, azúcar."
             }
         ],
-        ingredients: ["zanahoria", "harina sin gluten", "leche vegetal", "aceite de coco", "azúcar"]
+        receipt: {                  //o false
+            mainIngredient: [],
+            course: [],         //plato principal, guarnición, desayuno, bebida
+            cookingMethod: [],  //hervido, guiso, horneado, ensalada,
+            style: [],          //oriental, mexicana, rioplatense, andina, mediterránea, árabe, centroeuropea
+            glutenFree: true,
+            ingredients: []
+        }
     }, ----------------------------------------------*/
     {
         id: 0,
@@ -45,7 +52,14 @@ const entries = [
             altText: "Fajitas de vegetales servidas en una bandeja"
         },
         images: [],
-        ingredients: []
+        receipt: {
+            mainIngredient: ["tortillas de maíz", "alubias rojas", "pimientos"],
+            course: ["plato principal"],
+            cookingMethod: ["salteado"],
+            style: ["mexicano"],
+            glutenFree: true,
+            ingredients: ["tortillas de maíz", "alubias rojas", "pimientos", "cebollas", "chile", "aguacate", "tomate triturado", "ajo"]
+        }
     },
     {
         id: 1,
@@ -63,7 +77,14 @@ const entries = [
             altText: "Tapas veganas presentadas sobre una bandeja"
         },
         images: [],
-        ingredients: []
+        receipt: {
+            mainIngredient: ["alubias negras", "patatas"],
+            course: ["aperitivo"],
+            cookingMethod: ["guisado"],
+            style: ["oriental"],
+            glutenFree: true,
+            ingredients: ["alubias negras", "leche de coco", "patatas", "ajo", "jengibre", "mostaza", "curry", "cebolla"]
+        }
     },
     {
         id: 2,
@@ -81,7 +102,14 @@ const entries = [
             altText: "Bowl de ensalada kale"
         },
         images: [],
-        ingredients: []
+        receipt: {
+            mainIngredient: ["kale"],
+            course: ["guarnición"],
+            cookingMethod: ["ensalada"],
+            style: ["mediterráneo"],
+            glutenFree: false,
+            ingredients: ["kale", "croutons", "tomates", "champignones", "limón", "aceite"]
+        }
     }
     
 ];
