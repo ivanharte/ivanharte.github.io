@@ -3,6 +3,7 @@
 nav .dropdown-item {
     color: rgba(255, 255, 255, .5);
 }
+
 nav .dropdown-menu a:hover {
     color: rgba(255, 255, 255, .75);
     background-color: #6c757d;
@@ -17,6 +18,7 @@ nav .dropdown-menu a:active {
     height: calc(50vh + 5vw);
     object-fit: cover;
 }
+
 .carousel-caption {
     background-color: rgba(255, 255, 255, .8);
     font-weight: 500;
@@ -28,8 +30,16 @@ nav .dropdown-menu a:active {
     background-color: rgba(230, 230, 230, .85);
 }
 
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-size: 35%;
+}
+
+/* Receipt browser
+------------------------------------------*/
+@media (min-width: 400px) and (max-width: 1199px) {
+    .receipt-browser .container {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
 }
