@@ -11,7 +11,6 @@ const entries = [
         title: "Torta de zanahoria sin gluten con cobertura de crema de coco",
             //ver si coincide con metadato HTML, y si puede ser igual que primer párrafo
         description: "Una deliciosa variante de la clásica carrot cake apta para personas celíacas y con intolerancia al gluten. Ideal como postre o para acompañar un té.",
-        type: "receta", //si no: "articulo"
         category: "receta", //otras: nutrición, veganismo, barcelona
         mainTopic: "torta de zanahoria",
         tags: ["zanahoria", "torta", "merienda", "postre", "té", "sin gluten", "celíacos"],
@@ -32,7 +31,7 @@ const entries = [
             course: [],         //plato principal, guarnición, desayuno, bebida
             cookingMethod: [],  //hervido, guiso, horneado, ensalada,
             style: [],          //oriental, mexicana, rioplatense, andina, mediterránea, árabe, centroeuropea
-            glutenFree: true,
+            glutenFree: [true],
             ingredients: []
         }
     }, ----------------------------------------------*/
@@ -41,8 +40,7 @@ const entries = [
         date: "2020-01-05",
         title: "Fajitas de vegetales",
         description: "Una combinación de vegetales y salsas veganas únicas para rellenar fajitas de estilo mexicano",
-        type: "",
-        category: "",
+        category: "receta",
         mainTopic: "",
         tags: [],
         URL: "2020-01-05-fajitas-de-vegetales.html",
@@ -57,7 +55,7 @@ const entries = [
             course: ["plato principal"],
             cookingMethod: ["salteado"],
             style: ["mexicano"],
-            glutenFree: true,
+            glutenFree: [true],
             ingredients: ["tortillas de maíz", "alubias rojas", "pimientos", "cebollas", "chile", "aguacate", "tomate triturado", "ajo"]
         }
     },
@@ -66,8 +64,7 @@ const entries = [
         date: "2020-01-12",
         title: "Tapas veganas",
         description: "Una selección de platillos veganos para acompañar las cervezas de la tardecita",
-        type: "",
-        category: "",
+        category: "receta",
         mainTopic: "",
         tags: [],
         URL: "2020-01-12-tapas-veganas.html",
@@ -78,11 +75,11 @@ const entries = [
         },
         images: [],
         receipt: {
-            mainIngredient: ["alubias negras", "patatas"],
+            mainIngredient: ["alubias rojas", "patatas"],
             course: ["aperitivo"],
             cookingMethod: ["guisado"],
             style: ["oriental"],
-            glutenFree: true,
+            glutenFree: [true],
             ingredients: ["alubias negras", "leche de coco", "patatas", "ajo", "jengibre", "mostaza", "curry", "cebolla"]
         }
     },
@@ -91,8 +88,7 @@ const entries = [
         date: "2020-01-16",
         title: "Ensalada de kale",
         description: "Una deliciosa y nutritiva ensalada de kale para acompañar cualquier plato principal",
-        type: "",
-        category: "",
+        category: "receta",
         mainTopic: "",
         tags: [],
         URL: "2020-01-16-ensalada-de-kale.html",
@@ -107,9 +103,25 @@ const entries = [
             course: ["guarnición"],
             cookingMethod: ["ensalada"],
             style: ["mediterráneo"],
-            glutenFree: false,
+            glutenFree: [false],
             ingredients: ["kale", "croutons", "tomates", "champignones", "limón", "aceite"]
         }
+    },
+    {
+        id: 3,
+        date: "2020-01-18",
+        title: "Manifestación mundial contra el maltrato animal",
+        description: "El día 29 de abril se realizará en todo el mundo una enorme manifestación en contra del especismo y el maltrato animal",
+        category: "veganismo",
+        mainTopic: "",
+        tags: [],
+        URL: "",
+        thumbnail: {
+            large: "",
+            small: "",
+            altText: ""
+        },
+        images: [],
+        receipt: false
     }
-    
 ];
