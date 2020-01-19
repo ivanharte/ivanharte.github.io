@@ -38,8 +38,17 @@ nav .dropdown-menu a:active {
 /* Receipt browser
 ------------------------------------------*/
 @media (min-width: 400px) and (max-width: 1199px) {
-    .receipt-browser .container {
+    .receipt-browser-container {
         padding-left: 3rem;
         padding-right: 3rem;
     }
+}
+
+.receipt-browser-results {
+    overflow-y: scroll;
+    max-height: 60vh;
+}
+
+.receipt-browser-results li:hover {
+    background-color: rgba(230, 230, 230, .85);
 }

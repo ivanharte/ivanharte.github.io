@@ -35,6 +35,23 @@ function serveFeatured() {
     }
 }
 
+/* Serves filtered entries to container
+----------------------------------------------------------*/
+function serveEntries(entriesArray, targetContainerId) {
+    const container = document.getElementById(targetContainerId);
+    const containerContent = entriesArray.map(entry => {
+        
+        return `<li class="media position-relative flex-column col-md-6 col-xl-4 py-3">
+        <img src="img/${entry.thumbnail.small}" class="w-100 mb-2" alt="${entry.thumbnail.altText}">
+        <div class="media-body">
+          <h5><a href="entries/${entry.URL}" class="stretched-link">${entry.title}</a></h5>
+          <p>${entry.description}</p>
+        </div>
+      </li>`;
+    });
+    container.innerHTML = containerContent.join("");
+}
+
 /********************* RECEIPT BROWSER *********************/
 //Classified receipts storage
 const classifiedReceipts = {
@@ -50,7 +67,7 @@ const categories = Object.keys(classifiedReceipts);
 
 //Filtered receipts control
 const filteredReceipts = {
-    filtered: undefined,
+    filtered: [],
     mainIngredient: undefined,
     course: undefined,
     cookingMethod: undefined,
@@ -100,7 +117,7 @@ function fillSelectsWithBrowsingTags(category) {
 ----------------------------------------------------------*/
 function assignEventListener(category) {
     const field = document.getElementById(category);
-
+    
     if (field.type === "select-one") {  //selects
             //Assigns filtering criteria to filtered receipts control
         field.onchange = function() {
@@ -110,6 +127,7 @@ function assignEventListener(category) {
                 filteredReceipts[category] = field.value;
             }
             filteredReceipts.filtered = filterReceipts();
+            serveFilteredReceipts();
         }
     } else {    //checkboxes
         field.onchange = function() {
@@ -119,6 +137,7 @@ function assignEventListener(category) {
                 filteredReceipts[category] = undefined;
             }
             filteredReceipts.filtered = filterReceipts();
+            serveFilteredReceipts();
         }
     }
 }
@@ -134,6 +153,35 @@ function filterReceipts() {
         }
     }
     return receipts;
+}
+
+/* Serves filtered receipts to results display
+----------------------------------------------------------*/
+function serveFilteredReceipts() {
+    const resultsDisplay = document.getElementById("receipt-browser-results");
+    
+    //Shows results display only if there are filters selected
+    let count = 0;
+    for (let category of categories) {
+        if (filteredReceipts[category] === undefined) {
+            count++;
+        }
+    }
+    if (count === categories.length) {
+        resultsDisplay.classList.add("d-none");
+        resultsDisplay.classList.remove("row");
+        return;
+    } else {
+        resultsDisplay.classList.remove("d-none");
+        resultsDisplay.classList.add("row");
+    }
+
+    if (filteredReceipts.filtered.length === 0) {
+        resultsDisplay.innerHTML = "<p>No hay recetas disponibles para esos criterios de búsqueda.</p>"
+    } else {
+        serveEntries(filteredReceipts.filtered, "receipt-browser-results");
+    }
+    resultsDisplay.scrollIntoView({behavior: "smooth", block: "end", inline: "end"});
 }
 
 /* Ensembles the receipt browser
