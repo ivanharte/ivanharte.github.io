@@ -35,21 +35,44 @@ function serveFeatured() {
     }
 }
 
-/* Serves filtered entries to container
-----------------------------------------------------------*/
-function serveEntries(entriesArray, targetContainerId) {
-    const container = document.getElementById(targetContainerId);
-    const containerContent = entriesArray.map(entry => {
-        
-        return `<li class="media position-relative flex-column col-md-6 col-xl-4 py-3">
-        <img src="img/${entry.thumbnail.small}" class="w-100 mb-2" alt="${entry.thumbnail.altText}">
-        <div class="media-body">
-          <h5><a href="entries/${entry.URL}" class="stretched-link">${entry.title}</a></h5>
-          <p>${entry.description}</p>
-        </div>
-      </li>`;
-    });
-    container.innerHTML = containerContent.join("");
+function serveLatestEntries() {
+    const latestEntries = entries.filter(entry => entries.indexOf(entry) >= entries.length - 5).reverse();
+    document.getElementById("latestEntries").innerHTML += 
+        `<div class="row">
+            <div class="col-md-6">
+                <li class="media position-relative flex-column py-3">
+                    <img src="img/${latestEntries[0].thumbnail.small}" 
+                        class="w-100 mb-2" 
+                        alt="${latestEntries[0].thumbnail.altText}">
+                    <div class="media-body">
+                        <h5>
+                            <a href="entries/${latestEntries[0].URL}" class="stretched-link">
+                                ${latestEntries[0].title}
+                            </a>
+                        </h5>
+                        <p>${latestEntries[0].description}</p>
+                    </div>
+                </li>
+            </div>
+            <div class="col-md-6">
+                <div class="row" id="2x2"></div>
+            <div>
+        <div>`;
+    for (let i = 1; i < latestEntries.length; i++) {
+        document.getElementById("2x2").innerHTML += 
+            `<li class="media position-relative flex-column col-6 py-3">
+                <img src="img/${latestEntries[i].thumbnail.small}" 
+                    class="w-100 mb-2" 
+                    alt="${latestEntries[i].thumbnail.altText}">
+                <div class="media-body mx-auto text-center">
+                    <h5>
+                        <a href="entries/${latestEntries[i].URL}" class="stretched-link">
+                            ${latestEntries[i].title}
+                        </a>
+                    </h5>
+                </div>
+            </li>`;
+    }
 }
 
 /********************* RECEIPT BROWSER *********************/
@@ -155,6 +178,23 @@ function filterReceipts() {
     return receipts;
 }
 
+/* Serves filtered entries to container
+----------------------------------------------------------*/
+function serveEntries(entriesArray, targetContainerId) {
+    const container = document.getElementById(targetContainerId);
+    const containerContent = entriesArray.map(entry => {
+        
+        return `<li class="media position-relative flex-column col-md-6 col-xl-4 py-3">
+        <img src="img/${entry.thumbnail.small}" class="w-100 mb-2" alt="${entry.thumbnail.altText}">
+        <div class="media-body">
+          <h5><a href="entries/${entry.URL}" class="stretched-link">${entry.title}</a></h5>
+          <p>${entry.description}</p>
+        </div>
+      </li>`;
+    });
+    container.innerHTML = containerContent.join("");
+}
+
 /* Serves filtered receipts to results display
 ----------------------------------------------------------*/
 function serveFilteredReceipts() {
@@ -177,11 +217,12 @@ function serveFilteredReceipts() {
     }
 
     if (filteredReceipts.filtered.length === 0) {
-        resultsDisplay.innerHTML = "<p>No hay recetas disponibles para esos criterios de búsqueda.</p>"
+        resultsDisplay.innerHTML = 
+            '<p class="mx-auto">No hay recetas disponibles para esos criterios de búsqueda.</p>';
     } else {
         serveEntries(filteredReceipts.filtered, "receipt-browser-results");
     }
-    resultsDisplay.scrollIntoView({behavior: "smooth", block: "end", inline: "end"});
+    document.getElementsByClassName("receipt-browser-container")[0].scrollIntoView(true);
 }
 
 /* Ensembles the receipt browser
@@ -208,6 +249,8 @@ function removeFocusAfterClick() {
 window.onload = function() {
     
     serveFeatured();
+
+    serveLatestEntries();
 
     removeFocusAfterClick();
 

@@ -118,7 +118,7 @@ const entries = [
         URL: "",
         thumbnail: {
             large: "",
-            small: "",
+            small: "2020-01-18-manifestacion-mundial-contra-el-maltrato-animal-small.jpg",
             altText: ""
         },
         images: [],
