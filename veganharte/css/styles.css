@@ -52,3 +52,61 @@ nav .dropdown-menu a:active {
 .receipt-browser-results li:hover {
     background-color: rgba(230, 230, 230, .85);
 }
+
+/* Footer
+------------------------------------------*/
+.social-media {
+    height: 2.5rem;
+}
+
+.social-media svg {
+    fill: white;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+.facebook:hover {
+    background-color: #5278c9;
+}
+
+.instagram {
+    background-color: #C13584;
+}
+.instagram:hover {
+    background-color: #E1306C;
+}
+
+.bg-gray {
+    background-color: rgba(230, 230, 230);
+}
+
+footer form {
+    max-width: 600px;
+}
+
+@media (max-width: 500px) {
+    .mc-field-group {
+        width: 70%!important;
+    }
+}
+@media (max-width: 400px) {
+    .input-container {
+        display: block!important;
+    }
+}
+
+.kw-form-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media(max-width: 400px) {
+    .kw-form-wrapper .w-75 {
+        width: 100%!important;
+    }
+
+    .kw-form-wrapper .btn {
+        width: 40%!important;
+    }
+}

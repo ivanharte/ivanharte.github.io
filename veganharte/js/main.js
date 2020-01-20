@@ -216,13 +216,20 @@ function serveFilteredReceipts() {
         resultsDisplay.classList.add("row");
     }
 
+    //shows result
     if (filteredReceipts.filtered.length === 0) {
         resultsDisplay.innerHTML = 
             '<p class="mx-auto">No hay recetas disponibles para esos criterios de búsqueda.</p>';
     } else {
         serveEntries(filteredReceipts.filtered, "receipt-browser-results");
     }
-    document.getElementsByClassName("receipt-browser-container")[0].scrollIntoView(true);
+
+    //moves receipt browser to top in order to display results
+    document.getElementById("underNavBar").classList.remove("d-none");
+    document.getElementById("underNavBar").classList.add("d-block");
+    document.getElementById("underNavBar").scrollIntoView(true);
+    document.getElementById("underNavBar").classList.remove("d-block");
+    document.getElementById("underNavBar").classList.add("d-none");
 }
 
 /* Ensembles the receipt browser
@@ -253,6 +260,8 @@ window.onload = function() {
     serveLatestEntries();
 
     removeFocusAfterClick();
+
+    setFormSpanWidth();
 
     buildReceiptBrowser();  //al terminar de servir los datos
 
