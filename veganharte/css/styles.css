@@ -63,7 +63,7 @@ article section {
     line-height: 1.7;
 }
 
-/* Footer
+/* Social media buttons
 ------------------------------------------*/
 .social-media {
     height: 2.5rem;
@@ -87,6 +87,9 @@ article section {
     background-color: #E1306C;
 }
 
+
+/* Footer
+------------------------------------------*/
 .bg-gray {
     background-color: rgba(230, 230, 230);
 }
