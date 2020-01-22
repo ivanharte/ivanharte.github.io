@@ -46,13 +46,13 @@
                     
                     <ul class="navbar-nav mx-auto px-4 px-lg-5 text-center">
 
-                        <li class="nav-item active px-lg-2 w-25">
+                        <li class="nav-item px-lg-2 w-25">
                             <a class="nav-link" href="./index.html">
                                 Home <span class="sr-only">(current)</span>
                             </a>
                         </li>
 
-                        <li class="nav-item text-nowrap px-lg-2 w-25">
+                        <li class="nav-item active text-nowrap px-lg-2 w-25">
                             <a class="nav-link" href="./sobre-mi.html">
                                 Sobre mí
                             </a>
@@ -215,25 +215,40 @@
                     </div>
                 </form>
             </div>
-            <div class="kwes-form container text-center mt-5">
-                <form method="POST" action="https://kwes.io/api/foreign/forms/4sJLJ9Hkvza82R3z3QAb" class="mx-auto">
-                    <h2 class="h4 text-left">Ponte en contacto</h2>
-                    <p class="text-left">Si deseas obtener más información sobre mis servicios, tienes interés en contratarme, o te gustaría que suba una entrada sobre algún tema o receta en particular, no dudes en contactarte conmigo.</p>
-                    <div class="w-75 mx-auto text-left d-flex flex-column">
-                        <div class="form-group">
-                            <label for="inputName">Nombre</label>
-                            <input type="text" class="form-control" name="name" id="inputName">
+            <div class="container mt-5" id="contact-me">
+                <form method="POST" action="https://formsubmit.io/send/163ebe1d-9876-4dd5-bdf7-a4192e6bfd16" class="mx-auto clearfix">
+                    
+                    <h2 class="h4">Ponte en contacto</h2>
+                    <p>Si deseas obtener más información sobre mis servicios, tienes interés en contratarme, o te gustaría que suba una entrada sobre algún tema o receta en particular, no dudes en contactarte conmigo.</p>
+                    
+                    <div class="invisible" id="successful-submit"></div>
+
+                    <input name="_redirect" type="hidden" value="http://127.0.0.1:5500/veganharte/index.html#successful-submit">
+                    
+                    <div class="form-group row">
+                        <label for="inputName" class="col-sm-2 col-form-label">Nombre</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputName" name="name">
                         </div>
-                        <div class="form-group">
-                            <label for="inputEmail">Email</label>
-                            <input type="email" class="form-control" name="email" id="inputEmail" rules="required">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea class="form-control" name="message" id="message" rules="required"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-dark w-25 ml-auto">Enviar</button>
                     </div>
+
+                    <div class="form-group row">
+                        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="message" class="col-sm-2 col-form-label">Mensaje</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" name="message" id="message" name="message" required rows="5"></textarea>
+                        </div>
+                    </div>
+                    
+                    <input name="_formsubmit_id" type="text" class="d-none">
+
+                    <button type="submit" class="btn btn-dark w-25 float-right">Enviar</button>
                 </form>
             </div>
         </div>
@@ -256,7 +271,6 @@
         crossorigin="anonymous"></script>
     <script src="data/entries.js"></script>
     <script src="js/main.js"></script>
-    <script src="https://kwes.io/js/kwes.js"></script>
 </body>
 
 </html>

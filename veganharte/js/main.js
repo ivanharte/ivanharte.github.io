@@ -252,6 +252,22 @@ function removeFocusAfterClick() {
     }
 }
 
+/* Opens modal after form redirect
+----------------------------------------------------------*/
+function successfulSubmit() {
+    const popUp = document.getElementById("successful-submit");
+    popUp.classList.remove("invisible");
+    popUp.classList.add("visible");
+    popUp.innerHTML = 
+        `<div class="alert alert-success alert-dismissable show fade" role="alert">
+            Tu mensaje se ha enviado correctamente. Gracias por contactarme!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>`;
+    location.hash = "";
+}
+
 /********************* SCRIPT EXECUTION *********************/
 window.onload = function() {
     
@@ -261,8 +277,10 @@ window.onload = function() {
 
     removeFocusAfterClick();
 
-    setFormSpanWidth();
-
     buildReceiptBrowser();  //al terminar de servir los datos
+
+    if (location.hash === "#successful-submit") {
+        successfulSubmit();
+    }
 
 };

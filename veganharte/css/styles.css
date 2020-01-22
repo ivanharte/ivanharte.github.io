@@ -95,18 +95,3 @@ footer form {
         display: block!important;
     }
 }
-
-.kw-form-wrapper {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-@media(max-width: 400px) {
-    .kw-form-wrapper .w-75 {
-        width: 100%!important;
-    }
-
-    .kw-form-wrapper .btn {
-        width: 40%!important;
-    }
-}
