@@ -53,6 +53,16 @@ nav .dropdown-menu a:active {
     background-color: rgba(230, 230, 230, .85);
 }
 
+
+/* Text
+------------------------------------------*/
+article section {
+    max-width: 680px;
+    margin: 2.5em auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
 /* Footer
 ------------------------------------------*/
 .social-media {
