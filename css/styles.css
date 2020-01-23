@@ -1,53 +1,7 @@
-body {
-    background-color: #2f2e2c;
-    font-family: 'Roboto Mono', monospace;
-    color: whitesmoke;
-    width: 90vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    display: grid;
-    grid-template-columns: 48% 48%;
-    grid-column-gap: 4%;
-    grid-template-areas:    "header aside"
-                            "main aside"
-                            "footer footer";
-}
-
-header {
-    grid-area: header;
-}
-
-main {
-    grid-area: main;
-}
-
-aside {
-    grid-area: aside;
-}
-
-footer {
-    grid-area: footer;
-}
-
-img {
-    width: 100%;
-}
-
-h1 {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 4em;
-}
-
-header p {
-    font-size: 2em;
-    text-align: center;
-}
-
-main p {
-    font-size: 1.5 em;
-    text-align: center;
+@media (min-width: 769px) {
+    .container {
+        max-width: 720px!important;
+    }
 }
 
 .videoWrapper {
