@@ -317,6 +317,16 @@ window.onload = function() {
         case "receipts":
             buildReceiptBrowser();
             serveEntriesHistory("receta");
+            break;
+        case "nutrition":
+            serveEntriesHistory("nutricion");
+            break;
+        case "veganism":
+            serveEntriesHistory("veganismo");
+            break;
+        case "barcelona":
+            serveEntriesHistory("barcelona");
+            break;
     }
 
     if (location.hash === "#successful-submit") {
