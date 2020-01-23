@@ -35,6 +35,8 @@ function serveFeatured() {
     }
 }
 
+/* Serves latest entries
+----------------------------------------------------------*/
 function serveLatestEntries() {
     const latestEntries = entries.filter(entry => entries.indexOf(entry) >= entries.length - 5).reverse();
     document.getElementById("latestEntries").innerHTML += 
@@ -70,6 +72,34 @@ function serveLatestEntries() {
                             ${latestEntries[i].title}
                         </a>
                     </h5>
+                </div>
+            </li>`;
+    }
+}
+
+/* Serves entries history
+----------------------------------------------------------*/
+function serveEntriesHistory(category) {
+    const filteredEntries = entries.filter(entry => entry.category === category).reverse();
+    const entriesHistory  = document.getElementById(`historial-${category}`);
+    for (let entry of filteredEntries) {
+        entriesHistory.innerHTML += 
+            `<li class="media position-relative row mx-xl-5 px-xl-5 py-2 align-items-center narrow-gutters-xs">
+                <h5 class="d-none col-12">
+                    <a href="entries/${entry.URL}" class="stretched-link">
+                        ${entry.title}
+                    </a>
+                </h5>
+                <img src="img/${entry.thumbnail.small}" 
+                    class="col-4 col-md-3 col-lg-2 w-100" 
+                    alt="${entry.thumbnail.altText}">
+                <div class="media-body col-8 col-md-9 col-lg-10">
+                    <h5>
+                        <a href="entries/${entry.URL}" class="stretched-link">
+                            ${entry.title}
+                        </a>
+                    </h5>
+                    <p class="m-0"><time class="mr-3 font-italic" datetime="${entry.date}">${reconvert(entry.date)}</time>${entry.description}</p>
                 </div>
             </li>`;
     }
@@ -242,7 +272,7 @@ function buildReceiptBrowser() {
     }
 }
 
-/********************* UI TWEAKS *********************/
+/********************* UI TWEAKS AND PRESENTATION *********************/
 /* Removes focus off carousel controls after mouse click, while keeping it for keyboard users
 ----------------------------------------------------------*/
 function removeFocusAfterClick() {
@@ -268,16 +298,26 @@ function successfulSubmit() {
     location.hash = "";
 }
 
+/* Reconverts date format
+----------------------------------------------------------*/
+function reconvert(dateString) {
+    return dateString.split("-").reverse().join("-");
+}
+
 /********************* SCRIPT EXECUTION *********************/
 window.onload = function() {
     
-    serveFeatured();
-
-    serveLatestEntries();
-
-    removeFocusAfterClick();
-
-    buildReceiptBrowser();  //al terminar de servir los datos
+    switch (document.body.dataset.title) {
+        case "index":
+            serveFeatured();
+            serveLatestEntries();
+            removeFocusAfterClick();
+            buildReceiptBrowser();  //al terminar de servir los datos
+            break;
+        case "receipts":
+            buildReceiptBrowser();
+            serveEntriesHistory("receta");
+    }
 
     if (location.hash === "#successful-submit") {
         successfulSubmit();

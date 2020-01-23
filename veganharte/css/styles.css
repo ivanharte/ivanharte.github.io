@@ -53,6 +53,40 @@ nav .dropdown-menu a:active {
     background-color: rgba(230, 230, 230, .85);
 }
 
+/* Media objects horizontal
+------------------------------------------*/
+@media (max-width: 575px) {
+    .narrow-gutters-xs {
+        margin-right: -5px;
+        margin-left: -5px;
+    }
+      
+    .narrow-gutters-xs > .col,
+    .narrow-gutters-xs > [class*="col-"] {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+}
+
+@media (max-width: 444px) {
+    .narrow-gutters-xs .d-none {
+        display: block!important;
+    }
+    .narrow-gutters-xs img {
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+    .narrow-gutters-xs .media-body {
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+    .narrow-gutters-xs .media-body h5 {
+        display: none!important;
+    }
+    .narrow-gutters-xs .media-body p {
+        font-size: 0.95em!important;
+    }
+}
 
 /* Text
 ------------------------------------------*/

@@ -15,7 +15,7 @@
     <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/1f90edf361157c591fbfa7538/9411f0be1700fab564eb921fe.js");</script>
 </head>
 
-<body>
+<body data-title="receipts">
 
     <header>
 
@@ -149,7 +149,79 @@
 
     <main>
         
-        
+        <header class="container mt-5 py-5">
+            <div class="row mt-5">
+                <img class="col-md-5 col-lg-4">
+                <div class="col-md-7 col-lg-8">
+                    <h1 class="display-4 font-weight-normal">Mi recetario vegano</h1>
+                    <p class="lead font-weight-normal">Para encontrar la que necesitas puedes usar el buscador de la barra de navegación o usar el explorador por categorías.</p>
+                    <p class="lead font-weight-normal">También puedes recorrer una por una las recetas del historial que encontrarás debajo del explorador.</p>
+                    <p class="lead font-weight-normal">Todas las semanas subo al menos una receta nueva al blog. ¡Vuelve pronto a revisar las novedades!</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="mt-5 pt-5 d-none" id="underNavBar"></div> <!-- keeps receipt browser under fixed navbar -->
+
+        <div class="receipt-browser-container container mt-5 py-4 border-top border-bottom">
+            <form>
+                <div class="row align-items-center">
+                    
+                    <h2 class="col-12 col-xl-auto h6 mb-3 m-xl-0 text-center">Encuentra una receta:</h2>
+    
+                    <div class="col-sm-6 mb-3 mb-xl-0 col-lg">
+                        <select class="custom-select custom-select-sm" id="mainIngredient">
+                            <option selected class="text-muted font-italic" value="all">
+                                Ingrediente principal
+                            </option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-sm-6 mb-3 mb-xl-0 col-lg">
+                        <select class="custom-select custom-select-sm" id="course">
+                            <option selected class="text-muted font-italic" value="all">
+                                Tipo de plato
+                            </option>
+                        </select>
+                    </div>
+    
+                    <div class="col-sm-6 mb-3 mb-xl-0 col-lg">
+                        <select class="custom-select custom-select-sm" id="cookingMethod">
+                            <option selected class="text-muted font-italic" value="all">
+                                Tipo de cocción
+                            </option>
+                        </select>
+                    </div>
+    
+                    <div class="col-sm-6 mb-3 mb-xl-0 col-lg">
+                        <select class="custom-select custom-select-sm" id="style">
+                            <option selected class="text-muted font-italic" value="all">
+                                Estilo / origen
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 col-xl-auto text-center">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="glutenFree">
+                            <label class="custom-control-label" for="glutenFree">
+                                Sin gluten
+                            </label>
+                        </div>
+                    </div>
+    
+                </div> <!-- row -->
+            </form>  <!-- form -->
+
+            <ul class="receipt-browser-results d-none mt-5 px-lg-5 list-unstyled" id="receipt-browser-results"></ul>
+
+        </div> <!-- receipt browser container -->        
+
+        <div class="container px-lg-5 mt-5" id="historial-receta">
+            
+            <h2 class="mb-4">Todas las recetas</h2 c>
+
+        </div>
 
     </main><!-- main container -->
 
