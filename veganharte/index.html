@@ -14,15 +14,23 @@
     
     <link rel="stylesheet" href="css/styles.css">
     
-    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/1f90edf361157c591fbfa7538/9411f0be1700fab564eb921fe.js");</script>
+    <script id="mcjs">
+        !function(c, h, i, m, p) {
+            m = c.createElement(h),
+            p = c.getElementsByTagName(h)[0],
+            m.async = 1,
+            m.src = i,
+            p.parentNode.insertBefore(m,p);
+        }(document,
+            "script",
+            "https://chimpstatic.com/mcjs-connected/js/users/1f90edf361157c591fbfa7538/9411f0be1700fab564eb921fe.js");
+    </script>
 </head>
 
 <body data-title="index">
 
     <header>
-
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-
             <div class="container-fluid mx-4 mx-sm-5 mx-md-3 mx-lg-5 justify-content-between">
 
                 <button class="navbar-toggler" 
@@ -31,43 +39,33 @@
                     data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" 
                     aria-expanded="false" 
-                    aria-label="Toggle navigation">
-                    
+                    aria-label="Alternar navegación">
                     <span class="navbar-toggler-icon"></span>
-
                 </button>
 
                 <a class="navbar-brand font-weight-bold m-0" 
                     href="./index.html">
-
                     Iván Harte
-
                 </a>
             
                 <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-                    
                     <ul class="navbar-nav mx-auto px-4 px-lg-5 text-center">
-
                         <li class="nav-item active px-lg-2 w-25">
                             <a class="nav-link" href="./index.html">
-                                Home <span class="sr-only">(current)</span>
+                                Home
+                                <span class="sr-only"> (actual)</span>
                             </a>
                         </li>
 
                         <li class="nav-item text-nowrap px-lg-2 w-25">
-                            <a class="nav-link" href="./sobre-mi.html">
-                                Sobre mí
-                            </a>
+                            <a class="nav-link" href="./sobre-mi.html">Sobre mí</a>
                         </li>
 
                         <li class="nav-item px-lg-2 w-25">
-                            <a class="nav-link" href="./mis-servicios.html">
-                                Servicios
-                            </a>
+                            <a class="nav-link" href="./mis-servicios.html">Servicios</a>
                         </li>
 
                         <li class="nav-item dropdown px-lg-2 mr-3 w-25">
-
                             <a class="nav-link dropdown-toggle" 
                                 href="#" 
                                 id="navbarDropdown" 
@@ -75,47 +73,25 @@
                                 data-toggle="dropdown"
                                 aria-haspopup="true" 
                                 aria-expanded="false">
-
                                 Artículos
-
                             </a>
 
                             <div class="dropdown-menu bg-dark border-0" aria-labelledby="navbarDropdown">
-
-                                <a class="dropdown-item" href="./recetas.html">
-                                    Recetas
-                                </a>
-
-                                <a class="dropdown-item" href="./nutricion.html">
-                                    Nutrición
-                                </a>
-
-                                <a class="dropdown-item" href="./veganismo.html">
-                                    Veganismo
-                                </a>
-
-                                <a class="dropdown-item" href="./veganismo-en-barcelona.html">
-                                    Barcelona
-                                </a>
-
+                                <a class="dropdown-item" href="./recetas.html">Recetas</a>
+                                <a class="dropdown-item" href="./nutricion.html">Nutrición</a>
+                                <a class="dropdown-item" href="./veganismo.html">Veganismo</a>
+                                <a class="dropdown-item" href="./veganismo-en-barcelona.html">Barcelona</a>
                             </div>
                         </li>
-
                     </ul>
 
                     <form class="form-inline my-2 my-lg-0">
-
                         <div class="input-group my-2 my-sm-0">
 
-                            <input type="search" 
-                                class="form-control" 
-                                placeholder="Buscar" 
-                                aria-label="Buscar">
+                            <input type="search" class="form-control" placeholder="Buscar" aria-label="Buscar">
 
                             <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" 
-                                    type="submit">
-
+                                <button class="btn btn-outline-secondary" type="submit">
                                     <svg class="bi bi-search" 
                                         width="1em" 
                                         height="1em" 
@@ -125,44 +101,51 @@
 
                                         <path fill-rule="evenodd" 
                                             d="M12.442 12.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" 
-                                            clip-rule="evenodd"></path>
+                                            clip-rule="evenodd">
+                                        </path>
+
                                         <path fill-rule="evenodd" 
                                             d="M8.5 14a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM15 8.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" 
-                                            clip-rule="evenodd"></path>
+                                            clip-rule="evenodd">
+                                        </path>
+
                                     </svg>
-                                
                                 </button>
                             </div>
 
                         </div>
-
-                        
-                        
-
                     </form>
 
                 </div>
-
             </div>
-
         </nav>
-
     </header>
 
     <main>
         
         <div id="featured-posts" class="carousel slide h-50 mt-5 pt-5" data-ride="carousel" pause="hover">
+
             <ol class="carousel-indicators" id="featured-indicators"></ol>
+
             <div class="carousel-inner" id="featured-container"></div>
-            <a class="carousel-control-prev carousel-control" href="#featured-posts" role="button" data-slide="prev">
+
+            <a class="carousel-control-prev carousel-control" 
+                href="#featured-posts" 
+                role="button" 
+                data-slide="prev">
                 <span class="carousel-control-prev-icon bg-dark p-4 rounded-circle" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
+                <span class="sr-only">Anterior</span>
             </a>
-            <a class="carousel-control-next carousel-control" href="#featured-posts" role="button" data-slide="next">
+
+            <a class="carousel-control-next carousel-control" 
+                href="#featured-posts" 
+                role="button" 
+                data-slide="next">
                 <span class="carousel-control-next-icon bg-dark p-4 rounded-circle" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
+                <span class="sr-only">Siguiente</span>
             </a>
-        </div> <!-- carousel -->
+
+        </div> <!-- featured posts carousel -->
         
         <div class="mt-5 pt-5 d-none" id="underNavBar"></div> <!-- keeps receipt browser under fixed navbar -->
 
@@ -213,22 +196,25 @@
                         </div>
                     </div>
     
-                </div> <!-- row -->
-            </form>  <!-- form -->
+                </div>
+            </form>
 
-            <ul class="receipt-browser-results d-none mt-5 px-lg-5 list-unstyled" id="receipt-browser-results"></ul>
+            <ul class="receipt-browser-results d-none mt-5 px-lg-5 list-unstyled" 
+                id="receipt-browser-results">
+            </ul>
 
         </div> <!-- receipt browser container -->
         
-        <div class="container" id="entriesShowcase">
+        <div class="container">
             <div class="mt-5" id="latestEntries">
                 <h2>Últimas entradas</h2>
             </div>
-        </div>
+        </div> <!-- entries showcase -->
 
-    </main><!-- main container -->
+    </main>
 
     <footer>
+
         <div class="bg-light mt-5 py-5">
             <div class="container">
                 <div class="row">
@@ -269,6 +255,7 @@
                 </div>
             </div>
         </div>
+
         <div class="bg-gray py-5">
             <div id="mc_embed_signup" class="container">
                 <form action="https://ivanharte.us4.list-manage.com/subscribe/post?u=1f90edf361157c591fbfa7538&amp;id=e34015663a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate mx-auto" target="_blank" novalidate>
@@ -330,8 +317,14 @@
         
         <div class="container py-4 text-center">
             <p class="lead font-weight-bold m-0">Vegan Harte ©2020 Iván Harte</p>
-            <p class="m-0">Sitio web desarrollado por <a href="https://darioscattolini.github.io/personal" target="_blank">Darío Scattolini</a></p c>
+            <p class="m-0">Sitio web desarrollado por 
+                <a href="https://darioscattolini.github.io/personal" 
+                    target="_blank">
+                    Darío Scattolini
+                </a>
+            </p>
         </div>
+
     </footer>
 
     
