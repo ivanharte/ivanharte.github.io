@@ -282,6 +282,14 @@ function removeFocusAfterClick() {
     }
 }
 
+/* Sets form submission redirection URL
+----------------------------------------------------------*/
+function setFormRedirectionURL() {
+    const baseURL = location.href;
+    const redirector = document.querySelector("input[name=_redirect]");
+    redirector.setAttribute("value", `${baseURL}#successful-submit`);
+}
+
 /* Opens modal after form redirect
 ----------------------------------------------------------*/
 function successfulSubmit() {
@@ -296,7 +304,6 @@ function successfulSubmit() {
             </button>
         </div>`;
     popUp.scrollIntoView(true);
-    location.hash = "";
 }
 
 /* Reconverts date format
@@ -329,7 +336,7 @@ window.onload = function() {
             serveEntriesHistory("barcelona");
             break;
     }
-
+    setFormRedirectionURL();
     if (location.hash === "#successful-submit") {
         successfulSubmit();
     }
