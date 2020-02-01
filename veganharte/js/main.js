@@ -295,6 +295,7 @@ function successfulSubmit() {
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>`;
+    popUp.scrollIntoView(true);
     location.hash = "";
 }
 
